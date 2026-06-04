@@ -1,0 +1,171 @@
+/* =========================================
+   Ticket System Styles
+   ========================================= */
+.neo-ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.neo-table-ticket {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 13px;
+}
+
+.neo-table-ticket th,
+.neo-table-ticket td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e5e5e5;
+    text-align: right;
+}
+
+.neo-table-ticket th {
+    background-color: #f8f9fa;
+    color: var(--neo-primary);
+    font-size: 14px;
+}
+
+.neo-status-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.neo-status-open {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.neo-status-closed {
+    background: #ffebee;
+    color: #d32f2f;
+}
+
+.neo-status-answered {
+    background: #e8f5e9;
+    color: #388e3c;
+}
+
+.neo-form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.neo-form-row .neo-form-group {
+    flex: 1;
+}
+
+.neo-form-group {
+    margin-bottom: 15px;
+}
+
+.neo-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}
+
+.neo-input-ticket {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.neo-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.neo-input-file {
+    padding: 8px 0;
+}
+
+.neo-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-ticket-primary {
+    background: #007bff;
+    color: #fff;
+}
+
+.btn-ticket-primary:hover {
+    background: #0056b3;
+}
+
+.btn-ticket-secondary {
+    background: #6c757d;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.btn-ticket-secondary:hover {
+    background: #5a6268;
+}
+
+.btn-ticket-success {
+    color: #fff;
+    padding: 12px;
+    font-size: 14px;
+}
+
+.btn-ticket-success:hover {
+    background: #218838;
+}
+
+.neo-text-center {
+    text-align: center !important;
+    font-size: 14px;
+}
+
+.neo-frm-reply-msge {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.neo-frm-reply-msge label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.neo-ticket-chat-box {
+    margin-bottom: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.chat-message {
+    background: #e5f0fa;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border-right: 4px solid #2271b1;
+}
+
+.neo-reply-ticket-form button {
+    background: #2271b1;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
