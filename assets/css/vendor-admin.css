@@ -1,0 +1,25 @@
+.tablenav-pages .pagination-links {
+  display: flex;
+  gap: 4px;
+}
+
+.tablenav-pages .pagination-links a,
+.tablenav-pages .pagination-links span {
+  padding: 5px 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+}
+
+.tablenav-pages .pagination-links a:hover {
+  background: #f0f0f0;
+  border-color: #999;
+}
+
+.tablenav-pages .pagination-links .current {
+  background: #2271b1;
+  color: #fff;
+  border-color: #2271b1;
+}

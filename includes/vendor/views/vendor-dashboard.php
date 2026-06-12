@@ -1,10 +1,11 @@
 <?php
+
 /**
  * Vendor Dashboard View
  * UI: Modern Dashboard Cards & Quick Actions
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // جلوگیری از دسترسی مستقیم
+if (! defined('ABSPATH')) exit; // جلوگیری از دسترسی مستقیم
 
 $user_id = get_current_user_id();
 // در اینجا می‌توانید آمارهای واقعی را از دیتابیس کوئری بزنید
@@ -12,12 +13,12 @@ $total_sales = 0; // نمونه
 $active_products = 0; // نمونه
 $pending_orders = 0; // نمونه
 // دریافت دسته‌بندی‌های ووکامرس برای دراپ‌داون جستجو
-$product_categories = get_terms( array(
+$product_categories = get_terms(array(
     'taxonomy'   => 'product_cat',
     'hide_empty' => false,
-) );
+));
 ?>
-  
+
 <div class="neo-content-vendor">
     <div class="neo-dashboard-actions">
         <div class="neo-dashboard-header">
@@ -27,10 +28,6 @@ $product_categories = get_terms( array(
     </div>
 
     <div id="neo-dashboard-vendor">
-        <button class="neo-btn-action neo-load-subtab" id="neo-btn-open-product-vendor">
-            <i class="dashicons dashicons-plus-alt2"></i> افزودن محصول جدید
-        </button>
-
         <div class="neo-stats-grid">
             <div class="neo-stat-vendor-card card-blue">
                 <div class="neo-stat-icon">
@@ -85,66 +82,4 @@ $product_categories = get_terms( array(
             </div>
         </div>
     </div>
-
-    <div id="neo-add-product-vendor" style="display:none;">
-        <button class="neo-btn-action neo-load-subtab" id="neo-order-list-vendor">
-            <i class="dashicons dashicons-list-view"></i> لیست سفارشات
-        </button>
-            <div class="neo-product-vendor-content">
-                <div class="neo-list-product-vendor">
-                    <h3>جستجو و انتخاب محصول از سایت</h3>
-                </div>
-                
-                <div class="neo-product-list-body">
-                    <!-- بخش فیلترهای جستجو -->
-                    <div class="neo-search-bar-vendor">
-                        <div class="neo-form-group">
-                            <select id="neo-search-category" class="neo-select">
-                                <option value="">همه دسته‌بندی‌ها</option>
-                                <?php foreach ( $product_categories as $category ) : ?>
-                                    <option value="<?php echo esc_attr( $category->term_id ); ?>">
-                                        <?php echo esc_html( $category->name ); ?>
-                                    </option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
-                        
-                        <div class="neo-form-group neo-search-input-group">
-                            <input type="text" id="neo-search-keyword" placeholder="نام یا شناسه (SKU) محصول را وارد کنید...">
-                        </div>
-                        <!-- دکمه جستجو حذف شد -->
-                    </div>
-
-                    <div id="neo-search-loading" style="display:none; text-align:center; padding: 20px;">
-                        <span class="spinner is-active" style="float:none;"></span> در حال بارگذاری محصولات...
-                    </div>
-
-                    <!-- بخش جدول نتایج (حالا به صورت پیش‌فرض نمایش داده می‌شود) -->
-                    <div id="neo-search-results-container">
-                        <div class="neo-table-responsive">
-                            <table class="neo-vendor-table">
-                                <thead>
-                                    <tr>
-                                        <th>تصویر</th>
-                                        <th>نام محصول</th>
-                                        <th>شناسه (SKU)</th>
-                                        <th>دسته‌بندی</th>
-                                        <th>عملیات</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="neo-search-results-body">
-       
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-
-    </div>
 </div>
-
-        
-
-        
